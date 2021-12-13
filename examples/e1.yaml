@@ -1,3 +1,4 @@
-type: type-product-os-type-source-template@1.0.0
+type: type-balena-io-playground/t-buildroot-kconfig@1.0.0
 data:
-  myProp: blub
+  configs: 
+   - BR2_PACKAGE_LIGHTTPD=y
