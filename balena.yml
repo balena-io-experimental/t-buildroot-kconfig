@@ -1,14 +1,13 @@
 type: type-product-os-t-type-source@1.2.1
 name: Buildroot Configs List
-version: 1.0.1
+version: 1.0.2
 data:
   # adding this line to a contract enables Transformers to pick them up
   $transformer: {}
   # Everything below is strictly speaking optional and you can leave it as is to get started quickly.
   # But eventually you'll need to change it to ensure your instances contain the correct data and PRs creating
   # them, can only be merged under certain conditions
-
-#  # this is a JSONSchema describing instances of this type. You can constraint `data` as well as top level fields like `name`
+  #  # this is a JSONSchema describing instances of this type. You can constraint `data` as well as top level fields like `name`
   schema:
     type: object
     required: [ 'data' ]
