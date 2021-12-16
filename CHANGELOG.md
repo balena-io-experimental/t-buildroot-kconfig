@@ -2,11 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-# v1.0.3
-## (2021-11-29)
+# v1.0.0
+## (2021-12-13)
 
-# v1.0.4
-## (2021-11-30)
+# v1.0.1
+## (2021-12-16)
 
-* fix changelog [Martin Rauscher]
-* add an example to test my schema [Martin Rauscher]
+* initial-impl [Rahul Thakoor]
+
+* First Implementation
