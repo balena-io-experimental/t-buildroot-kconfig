@@ -24,22 +24,10 @@ data:
               mergeable:
                 description: PRs to instances of this type can be merged IF...
                 type: boolean
-                $$formula: 'true' # 👈 change this if you want to specify a rule, when you consider an instance of this type "good".
-                #                # you can delete the whole property if you don't care (it will default to true)
-                #                #
-                #                # E.g. if you compile something and record the number of warnings it could be `contract.data.warnings < 8` 
-                #                # to only allow merging PRs creating instances if this type when the compilation produced less than 8 warnings.
-                #                #
-                #                # The formula is javascript where `contract` points to the instance of the contract and
-                #                # you can use functions from https://formulajs.info/functions/
-                #                #
-                #                # You can also refer to things that were produced from this contract (e.g. node-module-source -> node-module) like this
-                #                #
-                #                #    FILTER(
-                #                #       PROPERTY(contract, "data.$transformer.backflow"),
-                #                #       function(c){return c && c.type.startsWith("type@1") && PROPERTY(c, "data.$transformer.mergeable")}
-                #                #     ).length > 0
-                #                #
-                #                # as you can see, this can be a multi-line string
+                $$formula: |
+                  FILTER(
+                       PROPERTY(contract, "data.$transformer.backflow"),
+                       function(c){ return c && !c.type.startsWith("error@") }
+                  ).length > 0
                 readOnly: true
                 default: false
